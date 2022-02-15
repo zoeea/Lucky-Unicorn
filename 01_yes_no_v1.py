@@ -5,8 +5,8 @@ show_instructions = input ("Have you played this game before? ") .lower()
 if show_instructions == "yes" :
     print ("Program continues")
 
- elif show_instructions == "no":
-     print("program continues")  
+elif show_instructions == "no":
+    print("display instructions")  
 
 # If they say no, output 'display instruction'
 else:
