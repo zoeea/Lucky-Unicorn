@@ -1,7 +1,8 @@
-name = ""   
-while name.lower() != "xxx":
-    name=input( "who are you? ")
-    print(name)
+again = ""
+while again == "":
 
-print()
-print("we are done!")   
+    print("hello")
+    print("world")
+
+    again = input("Press <enter> to go again or any key to quit")
+
