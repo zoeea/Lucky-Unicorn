@@ -8,7 +8,7 @@ error = "please enter a whole number between 1 and 10\n "
 
 valid = False
 while not valid:
-    try
+    try:
         # ask the question
         response = int(input("how much would you like to play with?"))
 
