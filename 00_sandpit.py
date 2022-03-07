@@ -6,3 +6,4 @@ while again == "":
 
     again = input("Press <enter> to go again or any key to quit")
 
+print("$" * 3)

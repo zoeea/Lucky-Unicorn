@@ -1,15 +1,20 @@
 import random
 
-# main routine goes here
+# set balance for testing purposes
+balance = 5
 
-tokens = ["unicorn", "horse","horse","horse",
-          "zebra","zebra","zebra",
-          "donkey","donkey","donkey",]
-starting_balance = 100
+rounds_played = 0
 
-balance = starting_balance
-# testing loop to generate 20 tokens
-for item in range(0, 10):
+play_again = input("Press <Enter> to play...") .lower()
+while play_again == "":
+
+    # increase # of rounds played
+    rounds_played += 1
+
+    # print round number
+    print()
+    print(" *** Round #{} *** ".format(rounds_played))
+   
     chosen_num = random.randint(1, 100)
 
     # Adjust balance
@@ -36,9 +41,16 @@ for item in range(0, 10):
             chosen = " Zebra"
         balance -= 0.5
 
-    print("You got a {}. Your balance is "
-          "${:.2f}".format(chosen, balance))
+    # output outcome
 
+    print("You got a {}.  Your balance is ${:.2f}".format(chosen, balance))
+
+    if balance < 1 :
+        play_again = "xxx"
+        print("Sorry you have run out of money")
+        break
+    else:
+         play_again = input("Press enter to play again "
+                       "or 'xxx' to quit")
 print()
-
-
+print("Final balance", balance)
